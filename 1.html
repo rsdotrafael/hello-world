@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>Hello World</title>
+    <style>
+        /* This styles the body to be a flex container */
+        body {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: 100vh; /* Use the full height of the viewport */
+            margin: 0; /* Remove default margin */
+        }
+        /* Styles for the button */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var userResponse = confirm('Hello World! Do you want to close the page now?');
+            if (userResponse) {
+                window.close();
+            }
+            // If the user clicks "Cancel", nothing happens and the page stays open
+        };
+    </script>
 </head>
 <body>
-    Hello World!
+    <button onclick="closePage()">Close the page</button>
+    <script>
+        function closePage() {
+                window.close()
+        }
+    </script>
 </body>
 </html>
